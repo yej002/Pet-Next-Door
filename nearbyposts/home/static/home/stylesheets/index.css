@@ -1,0 +1,18 @@
+#map {
+    min-height: 31.25em;
+    height: 80vh;
+}
+
+.post-pin {
+    background: url("/static/home/icons/marker.png") 100% 0 no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
