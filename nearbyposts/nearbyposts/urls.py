@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.urls import path
 from rest_framework.routers import DefaultRouter
 from post import views as posts_views
 from home import views as home_views
@@ -23,7 +22,7 @@ from home import views as home_views
 router = DefaultRouter()
 
 router.register(r'home', home_views.HomePageView, basename='home')
-router.register(r'posts', posts_views.PostView, basename = 'post')
+router.register(r'posts', posts_views.PostView, basename='post')
 
 urlpatterns = [
     path('', include(router.urls)),
