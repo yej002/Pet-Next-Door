@@ -9,7 +9,7 @@ import {
 
 export const USERNAME = document.body.getAttribute("data-username");
 
-let map = addMap();
+const map = addMap();
 
 addMapCallback(map, (data) => {
     displayNearbyPosts(map, data.result.center[0], data.result.center[1]);
