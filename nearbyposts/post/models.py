@@ -4,6 +4,7 @@ from django.contrib.postgres.fields import ArrayField
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 
+#create a class for post with designed attributes
 class Post(models.Model):
     id = models.BigAutoField(primary_key=True)
     created_at = models.DateTimeField(auto_now_add=True)

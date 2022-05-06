@@ -21,6 +21,7 @@ from home import views as home_views
 
 router = DefaultRouter()
 
+# router for homepage and post
 router.register(r'home', home_views.HomePageView, basename='home')
 router.register(r'posts', posts_views.PostView, basename='post')
 

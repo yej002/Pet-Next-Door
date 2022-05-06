@@ -5,16 +5,20 @@ from rest_framework.renderers import TemplateHTMLRenderer
 from post.services import get_my_posts, create_post, PostForm
 
 
+# create a view of homepage
 class HomePageView(viewsets.GenericViewSet):
     renderer_classes = [TemplateHTMLRenderer]
     template_name = 'home/index.html'
 
+# list of user's post and list a form for creat post
     def list(self, request):
         username = self.request.query_params.get('username')
         posts = get_my_posts(username)
         post_form = PostForm(initial={"creator": username})
         return Response({'username': username, 'posts': posts, 'form': post_form})
 
+# create a post with following attributes
+# defensive code with validation
     def create(self, request):
         form = PostForm(request.POST)
         if form.is_valid():

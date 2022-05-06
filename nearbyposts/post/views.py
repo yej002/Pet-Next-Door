@@ -6,10 +6,14 @@ from .services import get_nearby_posts_within
 from .serializer import PostSerializer
 
 
+# create a class for view of the post
 class PostView(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
+# using function of get_nearby_posts_within() to calculate distance
+# and return the posts as response
+# defensive coding for validation
     def list(self, request):
         latitude = self.request.query_params.get('lat')
         longitude = self.request.query_params.get('lng')
