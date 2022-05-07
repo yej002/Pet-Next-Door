@@ -23,7 +23,7 @@ By sharing warm stories with others, people can get closer and neighbors may kno
     - `pip3 install gdal`
 5. Create a python virtual environment
     - In `nearbyposts` folder run `python3 -m venv env`
-    - avtivate the virtual environment `source ~/nearbyposts/env/bin/activate`
+    - avtivate the virtual environment `source env/bin/activat`
 6. Install Django and other dependencies
     - `pip3 install -r requirements.txt`
 
