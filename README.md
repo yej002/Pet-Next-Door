@@ -9,21 +9,22 @@ By sharing warm stories with others, people can get closer and neighbors may kno
 ## App Screenshot
 <img width="1151" alt="Screen Shot 2022-05-06 at 5 44 20 PM" src="https://user-images.githubusercontent.com/49883143/167231116-d384e415-8236-4673-acde-3be373534f01.png">
 
-## Instruction to install
-1. Install PostgreSQL and PostGIS
-    - Install [Docker](https://docs.docker.com/get-docker/).
-    - Download and run [PosgreSQL/PostGIS](https://registry.hub.docker.com/r/postgis/postgis/).
-2. Install `Python3` or above and `pip3`
-3. Install GDAL(Required for Django to interface with PostGIS) and dependencies
-    - `pip3 install gdal`
+## Instruction to install(macOS)
+1. Install necessary dependencies
     - `brew install postgis`
     - `brew install openssl`
     - `brew install goes`
     - `brew install proj`
-4. Create a python virtual environment
+2. Install PostgreSQL and PostGIS
+    - Install [Docker](https://docs.docker.com/get-docker/).
+    - Download [PosgreSQL/PostGIS](https://registry.hub.docker.com/r/postgis/postgis/) by running `docker pull postgis/postgis`.
+3. Install `Python3.6` or above and `pip3`
+4. Install GDAL(Required for Django to interface with PostGIS)
+    - `pip3 install gdal`
+5. Create a python virtual environment
     - In `nearbyposts` folder run `python3 -m venv env`
     - avtivate the virtual environment `source ~/nearbyposts/env/bin/activate`
-5. Install Django and other dependencies
+6. Install Django and other dependencies
     - `pip3 install -r requirements.txt`
 
 ## Instuction to run server
