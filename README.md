@@ -11,8 +11,14 @@ By sharing warm stories with others, people can get closer and neighbors may kno
 
 ## Instruction to install(macOS)
 1. Install necessary dependencies
+    - `brew install libpq`
+    - - `export LDFLAGS="-L/usr/local/opt/libpq/lib"`
+    - - `export CPPFLAGS="-I/usr/local/opt/libpq/include"`
+    - `brew install postgres`
     - `brew install postgis`
     - `brew install openssl`
+    - - `export LDFLAGS="-L/usr/local/opt/openssl/lib`
+    - - `export CPPFLAGS="-I/usr/local/opt/openssl/include""`
     - `brew install goes`
     - `brew install proj`
 2. Install PostgreSQL and PostGIS
@@ -29,13 +35,12 @@ By sharing warm stories with others, people can get closer and neighbors may kno
 
 ## Instuction to run server
 1. Start PostgreSQL database service
-    - `docker pull postgis/postgis`
     - `docker run --name nearbyposts-postgis -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_DB=nearbyposts -d -p 5432:5432 postgis/postgis`
 2. Start Django web server (Make sure the virtual environment is activated) 
     - `python3 manage.py runserver`
 
 ## References
-My project is developed based on [tutorial](https://www.ashwinhariharan.tech/blog/thinking-of-building-a-contact-tracing-application-heres-what-you-can-do-instead/).
+My project is developed based on this [tutorial](https://www.ashwinhariharan.tech/blog/thinking-of-building-a-contact-tracing-application-heres-what-you-can-do-instead/).
 
 ## Future extensions
 Some future extensions will be login system and access control, picture uploading system and like and comment function.
