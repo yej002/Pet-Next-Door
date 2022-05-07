@@ -9,26 +9,28 @@ By sharing warm stories with others, people can get closer and neighbors may kno
 ## App Screenshot
 <img width="1151" alt="Screen Shot 2022-05-06 at 5 44 20 PM" src="https://user-images.githubusercontent.com/49883143/167231116-d384e415-8236-4673-acde-3be373534f01.png">
 
-## Instruction to install (macOS)
-1. Install necessary dependencies
-- brew install xxx
-3. Install PostgreSQL and PostGIS
+## Instruction to install
+1. Install PostgreSQL and PostGIS
     - Install [Docker](https://docs.docker.com/get-docker/).
-    - Download [PosgreSQL/PostGIS](https://registry.hub.docker.com/r/postgis/postgis/) by running `docker pull postgis/postgis`.
-4. Install `Python3.6` or above and `pip3`
-5. Install GDAL(Required for Django to interface with PostGIS)
+    - Download and run [PosgreSQL/PostGIS](https://registry.hub.docker.com/r/postgis/postgis/).
+2. Install `Python3` or above and `pip3`
+3. Install GDAL(Required for Django to interface with PostGIS) and dependencies
     - `pip3 install gdal`
-6. Create a python virtual environment
+    - `brew install postgis`
+    - `brew install openssl`
+    - `brew install goes`
+    - `brew install proj`
+4. Create a python virtual environment
     - In `nearbyposts` folder run `python3 -m venv env`
-    - avtivate the virtual environment `source env/bin/activate`
-7. Install Django and other dependencies
+    - avtivate the virtual environment `source ~/nearbyposts/env/bin/activate`
+5. Install Django and other dependencies
     - `pip3 install -r requirements.txt`
 
 ## Instuction to run server
-2. Start PostgreSQL database service
-    - Clear processes that are occupying port 5432
+1. Start PostgreSQL database service
+    - `docker pull postgis/postgis`
     - `docker run --name nearbyposts-postgis -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_DB=nearbyposts -d -p 5432:5432 postgis/postgis`
-3. Start Django web server (Make sure the virtual environment is activated) 
+2. Start Django web server (Make sure the virtual environment is activated) 
     - `python3 manage.py runserver`
 
 ## References
