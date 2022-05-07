@@ -17,8 +17,8 @@ By sharing warm stories with others, people can get closer and neighbors may kno
     - `brew install postgres`
     - `brew install postgis`
     - `brew install openssl`
-    - - `export LDFLAGS="-L/usr/local/opt/openssl/lib`
-    - - `export CPPFLAGS="-I/usr/local/opt/openssl/include""`
+    - - `export LDFLAGS="-L/usr/local/opt/openssl/lib"`
+    - - `export CPPFLAGS="-I/usr/local/opt/openssl/include"`
     - `brew install goes`
     - `brew install proj`
 2. Install PostgreSQL and PostGIS
