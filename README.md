@@ -22,8 +22,8 @@ By sharing warm stories with others, people can get closer and neighbors may kno
     - `brew install goes`
     - `brew install proj`
 2. Install PostgreSQL and PostGIS
-    - Install [Docker](https://docs.docker.com/get-docker/).
-    - Download [PosgreSQL/PostGIS](https://registry.hub.docker.com/r/postgis/postgis/) by running `docker pull postgis/postgis`.
+    - Install [Docker](https://docs.docker.com/get-docker/)
+    - Download [PosgreSQL/PostGIS](https://registry.hub.docker.com/r/postgis/postgis/) by running `docker pull postgis/postgis`
 3. Install `Python3.6` or above and `pip3`
 4. Install GDAL(Required for Django to interface with PostGIS)
     - `pip3 install gdal`
